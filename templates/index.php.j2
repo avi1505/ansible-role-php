@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ site_title }}</title>
+</head>
+<body>
+    <h1>{{ site_title }}</h1>
+    <p>Omgeving: {{ deployment_environment }}</p>
+    <p>PHP werkt op server: <?php echo htmlspecialchars(gethostname()); ?></p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+---
+- name: PHP en de Apache PHP module installeren
+  ansible.builtin.apt:
+    name: "{{ php_packages }}"
+    state: present
+  notify: Apache restarten
+
+- name: Standaard HTML startpagina verwijderen
+  ansible.builtin.file:
+    path: /var/www/html/index.html
+    state: absent
+
+- name: PHP testpagina toevoegen
+  ansible.builtin.template:
+    src: index.php.j2
+    dest: /var/www/html/index.php
+    owner: root
+    group: root
+    mode: "0644"

@@ -1,0 +1,7 @@
+---
+php_packages:
+  - php
+  - libapache2-mod-php
+
+site_title: "Apache en PHP via Ansible Galaxy"
+deployment_environment: "demo"

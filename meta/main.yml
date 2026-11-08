@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  role_name: php
+  namespace: avi1505
+  author: avi1505
+  description: Installeert PHP voor Apache op Ubuntu 24.04.
+  license: MIT
+  min_ansible_version: "2.19"
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - noble
+
+  galaxy_tags:
+    - php
+    - apache
+    - ubuntu
+
+dependencies:
+  - role: avi1505.apache
